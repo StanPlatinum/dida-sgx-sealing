@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+f2974620f87f4d6d48ccb80ba56b78c3 sample/DIDA/CMakeFiles/enclave-sign
+9d8ca697f9b363c7f4bba18c0cd3eaf3 sample/DIDA/Enclave_t.c
+3b24219702d76395388855152eb17144 sample/DIDA/Enclave_u.c

@@ -1,0 +1,13 @@
+# Target labels
+ dida
+# Source files and their labels
+/home/dajiejie/dida-sgx/dida/CMakeFiles/dida
+/home/dajiejie/dida-sgx/dida/CMakeFiles/dida.rule
+/home/dajiejie/dida-sgx/dida/CMakeFiles/dida-complete.rule
+/home/dajiejie/dida-sgx/dida/dida-prefix/src/dida-stamp/dida-install.rule
+/home/dajiejie/dida-sgx/dida/dida-prefix/src/dida-stamp/dida-mkdir.rule
+/home/dajiejie/dida-sgx/dida/dida-prefix/src/dida-stamp/dida-download.rule
+/home/dajiejie/dida-sgx/dida/dida-prefix/src/dida-stamp/dida-update.rule
+/home/dajiejie/dida-sgx/dida/dida-prefix/src/dida-stamp/dida-patch.rule
+/home/dajiejie/dida-sgx/dida/dida-prefix/src/dida-stamp/dida-configure.rule
+/home/dajiejie/dida-sgx/dida/dida-prefix/src/dida-stamp/dida-build.rule

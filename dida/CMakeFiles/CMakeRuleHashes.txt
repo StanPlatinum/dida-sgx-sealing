@@ -1,0 +1,10 @@
+# Hashes of file build rules.
+2532427d691b9044de46362996436ae7 CMakeFiles/dida
+cec348af6e2530e18de0cec3cb090fc5 CMakeFiles/dida-complete
+39e9a5c2184316ee88beaa6ff974ee3d dida-prefix/src/dida-stamp/dida-build
+5a050a92197f2e8666db4f3fc7ea9220 dida-prefix/src/dida-stamp/dida-configure
+39f796306854032d8b55b1168ea6b4ea dida-prefix/src/dida-stamp/dida-download
+0fb07f7d2e03cbbfde292bf0f1fdfa30 dida-prefix/src/dida-stamp/dida-install
+4657a06a245d5960428fed9fffc39c5a dida-prefix/src/dida-stamp/dida-mkdir
+b60a6e2d0829f9c4e31abc3e8cb5bac7 dida-prefix/src/dida-stamp/dida-patch
+d47361f91ffefd4e1843a11b16132ddb dida-prefix/src/dida-stamp/dida-update

@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/dajiejie/dida-sgx/dida/CMakeFiles/dida"
+		},
+		{
+			"file" : "/home/dajiejie/dida-sgx/dida/CMakeFiles/dida.rule"
+		},
+		{
+			"file" : "/home/dajiejie/dida-sgx/dida/CMakeFiles/dida-complete.rule"
+		},
+		{
+			"file" : "/home/dajiejie/dida-sgx/dida/dida-prefix/src/dida-stamp/dida-install.rule"
+		},
+		{
+			"file" : "/home/dajiejie/dida-sgx/dida/dida-prefix/src/dida-stamp/dida-mkdir.rule"
+		},
+		{
+			"file" : "/home/dajiejie/dida-sgx/dida/dida-prefix/src/dida-stamp/dida-download.rule"
+		},
+		{
+			"file" : "/home/dajiejie/dida-sgx/dida/dida-prefix/src/dida-stamp/dida-update.rule"
+		},
+		{
+			"file" : "/home/dajiejie/dida-sgx/dida/dida-prefix/src/dida-stamp/dida-patch.rule"
+		},
+		{
+			"file" : "/home/dajiejie/dida-sgx/dida/dida-prefix/src/dida-stamp/dida-configure.rule"
+		},
+		{
+			"file" : "/home/dajiejie/dida-sgx/dida/dida-prefix/src/dida-stamp/dida-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"dida"
+		],
+		"name" : "dida"
+	}
+}
