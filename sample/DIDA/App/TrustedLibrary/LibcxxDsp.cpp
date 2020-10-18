@@ -43,12 +43,14 @@
 #include "Enclave_u.h"
 #include "dsp.h"
 
-void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid) {
+void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid)
+{
     std::cout << "Loading bloom filters..." << std::endl;
     std::vector<std::vector<bool> *> bfs = dida_build_bf(argc, argv);
     std::cout << "Done loading bloom filters of length : " << bfs.size() << std::endl;
 
-    for (int x = 0; x < bfs.size(); x++) {
+    for (int x = 0; x < bfs.size(); x++)
+    {
         std::cout << "Encoding " << x << "th bfx" << std::endl;
         std::vector<bool> *bf = bfs[x];
         long bf_size = bf->size();
@@ -58,21 +60,25 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid) {
         unsigned char *bf_data = new unsigned char[char_arr_size];
         std::cout << "array size :  " << bf_size << std::endl;
         std::cout << "Encoding a bf of size " << bf->size() << std::endl;
-        for (long i = 0; i < bf_size;) {
+        for (long i = 0; i < bf_size;)
+        {
             unsigned char val = 0b00000000;
-            for (int b = 7; b > -1 && i < bf_size; b--, i++) {
+            for (int b = 7; b > -1 && i < bf_size; b--, i++)
+            {
                 val |= (bf->at(i) << b);
             }
             bf_data[(i / 8) - 1] = val;
         }
         printf("\n\n Sent\n\n");
-        for (int i = 0; i < 40; i++) {
+        for (int i = 0; i < 40; i++)
+        {
             printf("%s", bf->at(i) ? "1" : "0");
         }
         printf("\n");
 
         printf("\n\n Sent Chars\n\n");
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++)
+        {
             printf("%d,", bf_data[i]);
         }
         printf("\n");
@@ -81,9 +87,12 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid) {
         std::cout << "Sending a bf of size " << char_arr_size << " to the encalve..." << std::endl;
         sgx_status_t ret = ecall_load_bf(global_eid, bf_data, char_arr_size, bf_size);
         delete[] bf_data;
-        if (ret != SGX_SUCCESS) {
+        if (ret != SGX_SUCCESS)
+        {
             std::cerr << "Failed to add bloom filter to enclave" << std::endl;
-        } else {
+        }
+        else
+        {
             printf("Back from enclave\n");
         }
 
@@ -95,8 +104,11 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid) {
     // PARSE ARGS
     const char shortopts[] = "s:l:b:p:j:d:h:i:r";
 
-    enum { OPT_HELP = 1,
-           OPT_VERSION };
+    enum
+    {
+        OPT_HELP = 1,
+        OPT_VERSION
+    };
 
     int bmer = 16;
     int bmer_step = -1;
@@ -126,34 +138,36 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid) {
     bool die = false;
     std::string blPath;
 
-    for (int c; (c = getopt_long(argc, argv, shortopts, longopts, NULL)) != -1;) {
+    for (int c; (c = getopt_long(argc, argv, shortopts, longopts, NULL)) != -1;)
+    {
         std::istringstream arg(optarg != NULL ? optarg : "");
         std::cout << "PARAM " << c << std::endl;
-        switch (c) {
-            case '?':
-                die = true;
-                break;
-            case 'j':
-                arg >> threads;
-                break;
-            case 'b':
-                arg >> bmer;
-                break;
-            case 'p':
-                arg >> pnum;
-                break;
-            case 'l':
-                arg >> alen;
-                break;
-            case 's':
-                arg >> bmer_step;
-                break;
-            case 'h':
-                arg >> nhash;
-                break;
-            case 'i':
-                arg >> ibits;
-                break;
+        switch (c)
+        {
+        case '?':
+            die = true;
+            break;
+        case 'j':
+            arg >> threads;
+            break;
+        case 'b':
+            arg >> bmer;
+            break;
+        case 'p':
+            arg >> pnum;
+            break;
+        case 'l':
+            arg >> alen;
+            break;
+        case 's':
+            arg >> bmer_step;
+            break;
+        case 'h':
+            arg >> nhash;
+            break;
+        case 'i':
+            arg >> ibits;
+            break;
         }
     }
 
@@ -183,7 +197,8 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid) {
 
     std::ifstream input_files_list(argv[argc - 1]);
 
-    if (se) {
+    if (se)
+    {
         // single ended
 
         // reading file
@@ -196,11 +211,34 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid) {
                         std::istreambuf_iterator<char>());
 
         std::cerr << "Dispatch file length: " << str.size() << std::endl;
-        sgx_status_t ret = ecall_load_data(global_eid, const_cast<char *>(str.c_str()), str.length());
-        if (ret != SGX_SUCCESS) {
+
+        //---------------- Utility Code ----------------
+        // prepare the unsealed data
+        uint8_t *unsealed_data = (uint8_t *)(const_cast<char *>(str.c_str()));
+        size_t unsealed_data_length = sizeof(str);
+        // seal the data
+        size_t sealed_size = sizeof(sgx_sealed_data_t) + unsealed_data_length;
+        uint8_t *sealed_data = (uint8_t *)malloc(sealed_size);
+        sgx_status_t ecall_status;
+        seal(global_eid, &ecall_status,
+             unsealed_data, unsealed_data_length,
+             (sgx_sealed_data_t *)sealed_data, sealed_size);
+        if (ecall_status != SGX_SUCCESS)
+        {
+            printf("seal error...\n");
+        }
+        //---------------- Utility Code ----------------
+
+        // try to sealed data
+        sgx_status_t ret = ecall_load_sealed_data(global_eid, (sgx_sealed_data_t *)sealed_data, sealed_size, str.length());
+        //sgx_status_t ret = ecall_load_data(global_eid, const_cast<char *>(str.c_str()), str.length());
+        if (ret != SGX_SUCCESS)
+        {
             std::cerr << "Failed to dispatch file : " << ret << std::endl;
         }
-    } else {
+    }
+    else
+    {
         // paired ended
         std::string file_name_1;
         std::string file_name_2;
@@ -220,7 +258,8 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid) {
         sgx_status_t ret = ecall_load_data2(global_eid,
                                             const_cast<char *>(str1.c_str()), str1.length(),
                                             const_cast<char *>(str2.c_str()), str2.length());
-        if (ret != SGX_SUCCESS) {
+        if (ret != SGX_SUCCESS)
+        {
             std::cerr << "Failed to dispatch file : " << ret << std::endl;
         }
     }
