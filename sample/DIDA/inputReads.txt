@@ -1,0 +1,1 @@
+~/test_data/SSRR062634.filt.fastq

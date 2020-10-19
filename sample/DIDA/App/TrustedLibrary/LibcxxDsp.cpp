@@ -212,10 +212,10 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid)
 
         std::cerr << "Dispatch file length: " << str.size() << std::endl;
 
-        //---------------- Utility Code ----------------
+        //---------------- Utility Code starts ----------------
         // prepare the unsealed data
         uint8_t *unsealed_data = (uint8_t *)(const_cast<char *>(str.c_str()));
-        size_t unsealed_data_length = sizeof(str);
+        size_t unsealed_data_length = sizeof(str) + 1;
         // seal the data
         size_t sealed_size = sizeof(sgx_sealed_data_t) + unsealed_data_length;
         uint8_t *sealed_data = (uint8_t *)malloc(sealed_size);
@@ -225,9 +225,9 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid)
              (sgx_sealed_data_t *)sealed_data, sealed_size);
         if (ecall_status != SGX_SUCCESS)
         {
-            printf("seal error...\n");
+            printf("sealing error...\n");
         }
-        //---------------- Utility Code ----------------
+        //---------------- Utility Code ends ----------------
 
         // try to sealed data
         sgx_status_t ret = ecall_load_sealed_data(global_eid, (sgx_sealed_data_t *)sealed_data, sealed_size, str.length());
@@ -253,6 +253,37 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid)
 
         std::string str2((std::istreambuf_iterator<char>(input_file2)),
                          std::istreambuf_iterator<char>());
+
+        //---------------- Utility Code 2 starts ----------------
+        // prepare the unsealed data
+        uint8_t *unsealed_data1 = (uint8_t *)(const_cast<char *>(str1.c_str()));
+        size_t unsealed_data_length1 = sizeof(str1) + 1;
+        uint8_t *unsealed_data2 = (uint8_t *)(const_cast<char *>(str2.c_str()));
+        size_t unsealed_data_length2 = sizeof(str2) + 1;
+        // seal the data
+        size_t sealed_size1 = sizeof(sgx_sealed_data_t) + unsealed_data_length1;
+        uint8_t *sealed_data1 = (uint8_t *)malloc(sealed_size1);
+        size_t sealed_size2 = sizeof(sgx_sealed_data_t) + unsealed_data_length2;
+        uint8_t *sealed_data2 = (uint8_t *)malloc(sealed_size2);        
+        sgx_status_t ecall_status;
+        seal(global_eid, &ecall_status,
+             unsealed_data1, unsealed_data_length1,
+             (sgx_sealed_data_t *)sealed_data1, sealed_size1);
+        if (ecall_status != SGX_SUCCESS)
+        {
+            printf("sealing error...\n");
+        }
+        seal(global_eid, &ecall_status,
+             unsealed_data2, unsealed_data_length2,
+             (sgx_sealed_data_t *)sealed_data2, sealed_size2);
+        if (ecall_status != SGX_SUCCESS)
+        {
+            printf("sealing error...\n");
+        }
+        // sgx_status_t ret = ecall_load_sealed_data2(global_eid,
+        //                                     (sgx_sealed_data_t *)sealed_data1, sealed_size1, str1.length(),
+        //                                     (sgx_sealed_data_t *)sealed_data2, sealed_size2, str2.length());
+        //---------------- Utility Code 2 ends ----------------
 
         std::cerr << "Dispatch file lengths: " << str1.size() << "," << str2.size() << std::endl;
         sgx_status_t ret = ecall_load_data2(global_eid,
