@@ -332,9 +332,9 @@ void dispatchRead(char *sequence1, int seq1_len, char *sequence2, int seq2_len)
         size_t sealed_size = sizeof(sgx_sealed_data_t) + plaintext_len;
         uint8_t *sealed_data = (uint8_t *)malloc(sealed_size);
         sgx_status_t status = seal(plaintext, plaintext_len, (sgx_sealed_data_t *)sealed_data, sealed_size);
+        
         ocall_print_file((const char *)sealed_data, file_name.c_str(), 0);
-
-        ocall_print_file(rdFiles[i].c_str(), file_name.c_str(), 0);
+        //ocall_print_file(rdFiles[i].c_str(), file_name.c_str(), 0);
     }
 }
 

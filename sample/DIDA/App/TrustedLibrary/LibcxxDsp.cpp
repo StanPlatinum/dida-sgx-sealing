@@ -229,7 +229,7 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid)
         }
         //---------------- Utility Code ends ----------------
 
-        // try to sealed data
+        // load the sealed data, and unseal it inside the enclave
         sgx_status_t ret = ecall_load_sealed_data(global_eid, (sgx_sealed_data_t *)sealed_data, sealed_size, str.length());
         //sgx_status_t ret = ecall_load_data(global_eid, const_cast<char *>(str.c_str()), str.length());
         if (ret != SGX_SUCCESS)
