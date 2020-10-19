@@ -44,6 +44,8 @@ enclave {
         public void ecall_load_data([in, size=len] char* data, int len);
         public void ecall_load_sealed_data([in, size=sealed_size] sgx_sealed_data_t* sealed_data, size_t sealed_size, int len);
         public void ecall_load_data2([in, size=len1] char* data1, int len1,[in, size=len2] char* data2, int len2);
+        public void ecall_load_sealed_data2([in, size=sealed_size1] sgx_sealed_data_t* sealed_data1, size_t sealed_size1, int len1,
+            [in, size=sealed_size2] sgx_sealed_data_t* sealed_data2, size_t sealed_size2, int len2); 
         public void ecall_finalize_dispatch();
         public void ecall_print_bf_summary(void);
     };

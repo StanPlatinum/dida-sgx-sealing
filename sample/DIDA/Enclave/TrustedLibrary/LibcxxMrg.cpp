@@ -152,6 +152,24 @@ void fordMer(const int pNum, const std::string& alignerName) {
     ocall_print_file(comFile.c_str(), aln_sam.c_str(), 1);
 }
 
+void ecall_load_sealed_sam(sgx_sealed_data_t *sealed_data, size_t sealed_size, long char_len, int pid) {
+    // do decryption
+    char *data = (char *)malloc(char_len + 1);
+    uint8_t *plaintext = (uint8_t *)&data;
+    uint32_t plaintext_len = char_len + 1;
+    unseal(sealed_data, sealed_size, plaintext, plaintext_len);
+
+    if (pid != samFiles.size()) {
+        printf("Something wrong. Expected the sam file from process %d", pid);
+    }
+    // todo inefficient copy
+    char* cpy = new char[char_len];
+    for (long i = 0; i < char_len; i++) {
+        cpy[i] = data[i];
+    }
+    samFiles.push_back(cpy);
+}
+
 void ecall_load_sam(char* data, long char_len, int pid) {
     if (pid != samFiles.size()) {
         printf("Something wrong. Expected the sam file from process %d", pid);

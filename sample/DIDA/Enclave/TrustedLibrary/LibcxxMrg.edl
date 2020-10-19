@@ -37,6 +37,7 @@ enclave {
         public void ecall_init_merge(unsigned int maxCont, unsigned int maxRead, 
                 unsigned int pNum, [in, size=len] unsigned char* alnName, long len);
         public void ecall_load_sam([in, size=char_len] char* data, long char_len, int pid);
+        public void ecall_load_sealed_sam([in, size=sealed_size] sgx_sealed_data_t *sealed_data, size_t sealed_size, long char_len, int pid);
         public void ecall_load_sam_lreads([in, size=char_len] char* data, long char_len);
         public void ecall_finalize_merge();
     };
