@@ -332,7 +332,7 @@ void dispatchRead(char *sequence1, int seq1_len, char *sequence2, int seq2_len)
         size_t sealed_size = sizeof(sgx_sealed_data_t) + plaintext_len;
         uint8_t *sealed_data = (uint8_t *)malloc(sealed_size);
         sgx_status_t status = seal(plaintext, plaintext_len, (sgx_sealed_data_t *)sealed_data, sealed_size);
-        
+
         ocall_print_file((const char *)sealed_data, file_name.c_str(), 0);
         //ocall_print_file(rdFiles[i].c_str(), file_name.c_str(), 0);
     }
@@ -363,13 +363,15 @@ void ecall_finalize_dispatch()
 void ecall_load_sealed_data(sgx_sealed_data_t *sealed_data, size_t sealed_size, int seq_len)
 {
     // do decryption
-    char *data_seq = (char *)malloc(sizeof(seq_len));
-    uint8_t *plaintext = (uint8_t *)&data_seq;
-    uint32_t plaintext_len = seq_len;
+    char *data_seq = (char *)malloc(seq_len + 1);
+    uint8_t *plaintext = (uint8_t *)data_seq;
+    uint32_t plaintext_len = seq_len + 1;
     unseal(sealed_data, sealed_size, plaintext, plaintext_len);
+    printf("in enclave, plaintext_len: %ld\n", plaintext_len);
 
     printf("Dispatching read of length : %d, pnum: %d\n", seq_len, pnum);
-    dispatchRead(data_seq, seq_len, nullptr, 0);
+    //(data_seq, seq_len, nullptr, 0);
+    dispatchRead(data_seq, plaintext_len, nullptr, 0);
 }
 
 void ecall_load_data(char *data_seq, int seq_len)

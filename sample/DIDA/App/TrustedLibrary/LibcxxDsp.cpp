@@ -43,6 +43,8 @@
 #include "Enclave_u.h"
 #include "dsp.h"
 
+#include "timing.h"
+
 void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid)
 {
     std::cout << "Loading bloom filters..." << std::endl;
@@ -214,15 +216,27 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid)
 
         //---------------- Utility Code starts ----------------
         // prepare the unsealed data
+
+        // timing
+        struct myclock c1, c2;
+
         uint8_t *unsealed_data = (uint8_t *)(const_cast<char *>(str.c_str()));
-        size_t unsealed_data_length = sizeof(str) + 1;
+        size_t unsealed_data_length = str.length() + 1;
         // seal the data
+        START_TSC(c1);
+
         size_t sealed_size = sizeof(sgx_sealed_data_t) + unsealed_data_length;
         uint8_t *sealed_data = (uint8_t *)malloc(sealed_size);
         sgx_status_t ecall_status;
         seal(global_eid, &ecall_status,
              unsealed_data, unsealed_data_length,
              (sgx_sealed_data_t *)sealed_data, sealed_size);
+
+        END_TSC(c1);
+        printf("--------sealing time cost %ld cycles--------\n", c1.ticks);
+        printf("unsealed data length: %ld\n", unsealed_data_length);
+        printf("sealed size: %ld\n", sealed_size);
+
         if (ecall_status != SGX_SUCCESS)
         {
             printf("sealing error...\n");
@@ -230,8 +244,17 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid)
         //---------------- Utility Code ends ----------------
 
         // load the sealed data, and unseal it inside the enclave
+
+        printf("str length: %ld\n", str.length());
+
+        START_TSC(c2);
+
         sgx_status_t ret = ecall_load_sealed_data(global_eid, (sgx_sealed_data_t *)sealed_data, sealed_size, str.length());
         //sgx_status_t ret = ecall_load_data(global_eid, const_cast<char *>(str.c_str()), str.length());
+
+        END_TSC(c2);
+        printf("--------ecall_load and unsealing time cost %ld cycles--------\n", c2.ticks);
+
         if (ret != SGX_SUCCESS)
         {
             std::cerr << "Failed to dispatch file : " << ret << std::endl;
@@ -264,7 +287,7 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid)
         size_t sealed_size1 = sizeof(sgx_sealed_data_t) + unsealed_data_length1;
         uint8_t *sealed_data1 = (uint8_t *)malloc(sealed_size1);
         size_t sealed_size2 = sizeof(sgx_sealed_data_t) + unsealed_data_length2;
-        uint8_t *sealed_data2 = (uint8_t *)malloc(sealed_size2);        
+        uint8_t *sealed_data2 = (uint8_t *)malloc(sealed_size2);
         sgx_status_t ecall_status;
         seal(global_eid, &ecall_status,
              unsealed_data1, unsealed_data_length1,

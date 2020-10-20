@@ -38,6 +38,7 @@ sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.o: sample/DIDA/Enclave_u.h
 
 sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o: sample/DIDA/App/TrustedLibrary/LibcxxDsp.cpp
 sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o: sample/DIDA/App/TrustedLibrary/LibcxxDsp.h
+sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o: sample/DIDA/App/TrustedLibrary/timing.h
 sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o: /opt/intel/sgxsdk/include/sgx.h
 sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o: /opt/intel/sgxsdk/include/sgx_attributes.h
 sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o: /opt/intel/sgxsdk/include/sgx_defs.h
