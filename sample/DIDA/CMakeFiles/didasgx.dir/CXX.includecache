@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/dajiejie/dida-sgx/sample/DIDA/App/App.cpp
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/App.cpp
 assert.h
 -
 pwd.h
@@ -26,19 +26,19 @@ iostream
 regex
 -
 App.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/App.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/App.h
 Enclave_u.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/Enclave_u.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/Enclave_u.h
 TrustedLibrary/LibcxxDsp.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/LibcxxDsp.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/LibcxxDsp.h
 TrustedLibrary/LibcxxMrg.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/LibcxxMrg.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/LibcxxMrg.h
 sgx_uae_service.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/sgx_uae_service.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/sgx_uae_service.h
 sgx_urts.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/sgx_urts.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/sgx_urts.h
 
-/home/dajiejie/dida-sgx/sample/DIDA/App/App.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/App.h
 assert.h
 -
 stdio.h
@@ -48,13 +48,13 @@ stdlib.h
 stdarg.h
 -
 sgx_error.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/sgx_error.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/sgx_error.h
 sgx_eid.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/sgx_eid.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/sgx_eid.h
 
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/LibcxxDsp.cpp
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/LibcxxDsp.cpp
 LibcxxDsp.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/LibcxxDsp.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/LibcxxDsp.h
 getopt.h
 -
 stdio.h
@@ -72,19 +72,19 @@ thread
 vector
 -
 Enclave_u.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/Enclave_u.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/Enclave_u.h
 dsp.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/dsp.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/dsp.h
 timing.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/timing.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/timing.h
 
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/LibcxxDsp.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/LibcxxDsp.h
 sgx_urts.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/sgx_urts.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/sgx_urts.h
 
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/LibcxxMrg.cpp
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/LibcxxMrg.cpp
 LibcxxMrg.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/LibcxxMrg.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/LibcxxMrg.h
 cstring
 -
 fstream
@@ -94,21 +94,21 @@ iostream
 sstream
 -
 Enclave_u.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/Enclave_u.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/Enclave_u.h
 
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/LibcxxMrg.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/LibcxxMrg.h
 sgx_urts.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/sgx_urts.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/sgx_urts.h
 
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/timing.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/timing.h
 time.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/time.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/time.h
 unistd.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/unistd.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/unistd.h
 linux/types.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/linux/types.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/linux/types.h
 stdint.h
-/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/stdint.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/stdint.h
 
 /opt/intel/sgxsdk/include/sgx.h
 sgx_error.h

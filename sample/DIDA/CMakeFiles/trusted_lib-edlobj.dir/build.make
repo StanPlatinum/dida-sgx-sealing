@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dajiejie/dida-sgx
+CMAKE_SOURCE_DIR = /home/dajiejie/dida-sgx-sealing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dajiejie/dida-sgx
+CMAKE_BINARY_DIR = /home/dajiejie/dida-sgx-sealing
 
 # Include any dependencies generated for this target.
 include sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/depend.make
@@ -58,21 +58,21 @@ include sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/progress.make
 include sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/flags.make
 
 sample/DIDA/Enclave_t.c: sample/DIDA/Enclave/Enclave.edl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dajiejie/dida-sgx/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Enclave_t.c"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /opt/intel/sgxsdk/bin/x64/sgx_edger8r --trusted /home/dajiejie/dida-sgx/sample/DIDA/Enclave/Enclave.edl --search-path /home/dajiejie/dida-sgx/sample/DIDA/Enclave:/home/dajiejie/dida-sgx/sample/DIDA/Enclave/TrustedLibrary:/opt/intel/sgxsdk/include
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dajiejie/dida-sgx-sealing/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Enclave_t.c"
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /opt/intel/sgxsdk/bin/x64/sgx_edger8r --trusted /home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/Enclave.edl --search-path /home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave:/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary:/opt/intel/sgxsdk/include
 
 sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.o: sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/flags.make
 sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.o: sample/DIDA/Enclave_t.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dajiejie/dida-sgx/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.o"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.o   -c /home/dajiejie/dida-sgx/sample/DIDA/Enclave_t.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dajiejie/dida-sgx-sealing/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.o"
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.o   -c /home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave_t.c
 
 sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.i"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dajiejie/dida-sgx/sample/DIDA/Enclave_t.c > CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.i
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave_t.c > CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.i
 
 sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.s"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dajiejie/dida-sgx/sample/DIDA/Enclave_t.c -o CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.s
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave_t.c -o CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.s
 
 sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.o.requires:
 
@@ -100,10 +100,10 @@ sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/requires: sample/DIDA/CMakeFiles/t
 .PHONY : sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/requires
 
 sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/clean:
-	cd /home/dajiejie/dida-sgx/sample/DIDA && $(CMAKE_COMMAND) -P CMakeFiles/trusted_lib-edlobj.dir/cmake_clean.cmake
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && $(CMAKE_COMMAND) -P CMakeFiles/trusted_lib-edlobj.dir/cmake_clean.cmake
 .PHONY : sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/clean
 
 sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/depend: sample/DIDA/Enclave_t.c
-	cd /home/dajiejie/dida-sgx && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dajiejie/dida-sgx /home/dajiejie/dida-sgx/sample/DIDA /home/dajiejie/dida-sgx /home/dajiejie/dida-sgx/sample/DIDA /home/dajiejie/dida-sgx/sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dajiejie/dida-sgx-sealing && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dajiejie/dida-sgx-sealing /home/dajiejie/dida-sgx-sealing/sample/DIDA /home/dajiejie/dida-sgx-sealing /home/dajiejie/dida-sgx-sealing/sample/DIDA /home/dajiejie/dida-sgx-sealing/sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/depend
 

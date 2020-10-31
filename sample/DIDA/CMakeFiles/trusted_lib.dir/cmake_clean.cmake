@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/LibcxxDsp.cpp.o"
   "CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/LibcxxMrg.cpp.o"
   "CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/Sealing.cpp.o"
+  "CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/aesgcm.cpp.o"
   "libtrusted_lib.pdb"
   "libtrusted_lib.a"
 )

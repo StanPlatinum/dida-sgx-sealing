@@ -1,4 +1,4 @@
-# Install script for directory: /home/dajiejie/dida-sgx/sample/DIDA
+# Install script for directory: /home/dajiejie/dida-sgx-sealing/sample/DIDA
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

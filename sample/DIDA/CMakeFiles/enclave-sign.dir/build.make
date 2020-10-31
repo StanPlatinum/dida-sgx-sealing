@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dajiejie/dida-sgx
+CMAKE_SOURCE_DIR = /home/dajiejie/dida-sgx-sealing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dajiejie/dida-sgx
+CMAKE_BINARY_DIR = /home/dajiejie/dida-sgx-sealing
 
 # Utility rule file for enclave-sign.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/dajiejie/dida-sgx
 include sample/DIDA/CMakeFiles/enclave-sign.dir/progress.make
 
 sample/DIDA/CMakeFiles/enclave-sign:
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /opt/intel/sgxsdk/bin/x64/sgx_sign sign -key /home/dajiejie/dida-sgx/sample/DIDA/Enclave/Enclave_private.pem -config /home/dajiejie/dida-sgx/sample/DIDA/Enclave/Enclave.config.xml -enclave /home/dajiejie/dida-sgx/sample/DIDA/libenclave.so -out /home/dajiejie/dida-sgx/sample/DIDA/enclave.signed.so
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /opt/intel/sgxsdk/bin/x64/sgx_sign sign -key /home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/Enclave_private.pem -config /home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/Enclave.config.xml -enclave /home/dajiejie/dida-sgx-sealing/sample/DIDA/libenclave.so -out /home/dajiejie/dida-sgx-sealing/sample/DIDA/enclave.signed.so
 
 enclave-sign: sample/DIDA/CMakeFiles/enclave-sign
 enclave-sign: sample/DIDA/CMakeFiles/enclave-sign.dir/build.make
@@ -67,10 +67,10 @@ sample/DIDA/CMakeFiles/enclave-sign.dir/build: enclave-sign
 .PHONY : sample/DIDA/CMakeFiles/enclave-sign.dir/build
 
 sample/DIDA/CMakeFiles/enclave-sign.dir/clean:
-	cd /home/dajiejie/dida-sgx/sample/DIDA && $(CMAKE_COMMAND) -P CMakeFiles/enclave-sign.dir/cmake_clean.cmake
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && $(CMAKE_COMMAND) -P CMakeFiles/enclave-sign.dir/cmake_clean.cmake
 .PHONY : sample/DIDA/CMakeFiles/enclave-sign.dir/clean
 
 sample/DIDA/CMakeFiles/enclave-sign.dir/depend:
-	cd /home/dajiejie/dida-sgx && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dajiejie/dida-sgx /home/dajiejie/dida-sgx/sample/DIDA /home/dajiejie/dida-sgx /home/dajiejie/dida-sgx/sample/DIDA /home/dajiejie/dida-sgx/sample/DIDA/CMakeFiles/enclave-sign.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dajiejie/dida-sgx-sealing && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dajiejie/dida-sgx-sealing /home/dajiejie/dida-sgx-sealing/sample/DIDA /home/dajiejie/dida-sgx-sealing /home/dajiejie/dida-sgx-sealing/sample/DIDA /home/dajiejie/dida-sgx-sealing/sample/DIDA/CMakeFiles/enclave-sign.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : sample/DIDA/CMakeFiles/enclave-sign.dir/depend
 

@@ -6,25 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/Enclave.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/Enclave.h
 stdlib.h
 -
 assert.h
 -
 
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/TrustedLibrary/LibcxxDsp.cpp
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary/LibcxxDsp.cpp
 libcxx/string
 -
 libcxx/vector
 -
 ../Enclave.h
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/Enclave.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/Enclave.h
 Enclave_t.h
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/TrustedLibrary/Enclave_t.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary/Enclave_t.h
 sgx_tprotected_fs.h
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/TrustedLibrary/sgx_tprotected_fs.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary/sgx_tprotected_fs.h
 
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/TrustedLibrary/LibcxxMrg.cpp
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary/LibcxxMrg.cpp
 libcxx/sstream
 -
 libcxx/string
@@ -32,19 +32,31 @@ libcxx/string
 libcxx/vector
 -
 ../Enclave.h
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/Enclave.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/Enclave.h
 Enclave_t.h
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/TrustedLibrary/Enclave_t.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary/Enclave_t.h
 
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/TrustedLibrary/Sealing.cpp
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary/Sealing.cpp
 sgx_trts.h
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/TrustedLibrary/sgx_trts.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary/sgx_trts.h
 sgx_tseal.h
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/TrustedLibrary/sgx_tseal.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary/sgx_tseal.h
 string.h
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/TrustedLibrary/string.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary/string.h
 Enclave_t.h
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/TrustedLibrary/Enclave_t.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary/Enclave_t.h
+
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary/aesgcm.cpp
+sgx_trts.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary/sgx_trts.h
+sgx_tcrypto.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary/sgx_tcrypto.h
+stdlib.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary/stdlib.h
+string.h
+-
+Enclave_t.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary/Enclave_t.h
 
 /opt/intel/sgxsdk/include/libcxx/__bit_reference
 __config

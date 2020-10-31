@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave_t.c
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave_t.c
 Enclave_t.h
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave_t.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave_t.h
 sgx_trts.h
-/home/dajiejie/dida-sgx/sample/DIDA/sgx_trts.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/sgx_trts.h
 sgx_lfence.h
-/home/dajiejie/dida-sgx/sample/DIDA/sgx_lfence.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/sgx_lfence.h
 errno.h
 -
 mbusafecrt.h
@@ -20,7 +20,7 @@ mbusafecrt.h
 stdlib.h
 -
 
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave_t.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave_t.h
 stdint.h
 -
 wchar.h
@@ -28,9 +28,9 @@ wchar.h
 stddef.h
 -
 sgx_edger8r.h
-/home/dajiejie/dida-sgx/sample/DIDA/sgx_edger8r.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/sgx_edger8r.h
 sgx_tseal.h
-/home/dajiejie/dida-sgx/sample/DIDA/sgx_tseal.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/sgx_tseal.h
 stdlib.h
 -
 

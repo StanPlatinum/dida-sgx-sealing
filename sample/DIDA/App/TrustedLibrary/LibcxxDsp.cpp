@@ -140,6 +140,9 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid)
     bool die = false;
     std::string blPath;
 
+    //simple fix
+    optind = 1; // reset optid
+
     for (int c; (c = getopt_long(argc, argv, shortopts, longopts, NULL)) != -1;)
     {
         std::istringstream arg(optarg != NULL ? optarg : "");
@@ -280,9 +283,9 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid)
         //---------------- Utility Code 2 starts ----------------
         // prepare the unsealed data
         uint8_t *unsealed_data1 = (uint8_t *)(const_cast<char *>(str1.c_str()));
-        size_t unsealed_data_length1 = sizeof(str1) + 1;
+        size_t unsealed_data_length1 = str1.length() + 1;
         uint8_t *unsealed_data2 = (uint8_t *)(const_cast<char *>(str2.c_str()));
-        size_t unsealed_data_length2 = sizeof(str2) + 1;
+        size_t unsealed_data_length2 = str2.length() + 1;
         // seal the data
         size_t sealed_size1 = sizeof(sgx_sealed_data_t) + unsealed_data_length1;
         uint8_t *sealed_data1 = (uint8_t *)malloc(sealed_size1);
@@ -303,15 +306,15 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid)
         {
             printf("sealing error...\n");
         }
-        // sgx_status_t ret = ecall_load_sealed_data2(global_eid,
-        //                                     (sgx_sealed_data_t *)sealed_data1, sealed_size1, str1.length(),
-        //                                     (sgx_sealed_data_t *)sealed_data2, sealed_size2, str2.length());
+        sgx_status_t ret = ecall_load_sealed_data2(global_eid,
+                                            (sgx_sealed_data_t *)sealed_data1, sealed_size1, str1.length(),
+                                            (sgx_sealed_data_t *)sealed_data2, sealed_size2, str2.length());
         //---------------- Utility Code 2 ends ----------------
 
         std::cerr << "Dispatch file lengths: " << str1.size() << "," << str2.size() << std::endl;
-        sgx_status_t ret = ecall_load_data2(global_eid,
-                                            const_cast<char *>(str1.c_str()), str1.length(),
-                                            const_cast<char *>(str2.c_str()), str2.length());
+        // sgx_status_t ret = ecall_load_data2(global_eid,
+        //                                     const_cast<char *>(str1.c_str()), str1.length(),
+        //                                     const_cast<char *>(str2.c_str()), str2.length());
         if (ret != SGX_SUCCESS)
         {
             std::cerr << "Failed to dispatch file : " << ret << std::endl;

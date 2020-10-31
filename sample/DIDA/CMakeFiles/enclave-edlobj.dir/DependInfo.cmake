@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/dajiejie/dida-sgx/sample/DIDA/Enclave_t.c" "/home/dajiejie/dida-sgx/sample/DIDA/CMakeFiles/enclave-edlobj.dir/Enclave_t.c.o"
+  "/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave_t.c" "/home/dajiejie/dida-sgx-sealing/sample/DIDA/CMakeFiles/enclave-edlobj.dir/Enclave_t.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

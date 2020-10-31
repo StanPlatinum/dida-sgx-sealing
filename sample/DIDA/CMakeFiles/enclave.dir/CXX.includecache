@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/Enclave.cpp
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/Enclave.cpp
 stdarg.h
 -
 stdio.h
 -
 Enclave.h
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/Enclave.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/Enclave.h
 Enclave_t.h
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/Enclave_t.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/Enclave_t.h
 dsp.h
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/dsp.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/dsp.h
 
-/home/dajiejie/dida-sgx/sample/DIDA/Enclave/Enclave.h
+/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/Enclave.h
 stdlib.h
 -
 assert.h

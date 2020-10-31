@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dajiejie/dida-sgx
+CMAKE_SOURCE_DIR = /home/dajiejie/dida-sgx-sealing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dajiejie/dida-sgx
+CMAKE_BINARY_DIR = /home/dajiejie/dida-sgx-sealing
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/dajiejie/dida-sgx && $(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx/CMakeFiles /home/dajiejie/dida-sgx/sample/DIDA/CMakeFiles/progress.marks
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx/CMakeFiles 0
+	cd /home/dajiejie/dida-sgx-sealing && $(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx-sealing/CMakeFiles /home/dajiejie/dida-sgx-sealing/sample/DIDA/CMakeFiles/progress.marks
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx-sealing/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/clean
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/preinstall
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/preinstall
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/dajiejie/dida-sgx && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/dajiejie/dida-sgx-sealing && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/rule:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/rule
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/rule
 .PHONY : sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ trusted_lib-edlobj: sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/rule
 
 # fast build rule for target.
 trusted_lib-edlobj/fast:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/build.make sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/build
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/build.make sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/build
 .PHONY : trusted_lib-edlobj/fast
 
 # Convenience name for target.
 sample/DIDA/CMakeFiles/enclave-edlobj.dir/rule:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/enclave-edlobj.dir/rule
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/enclave-edlobj.dir/rule
 .PHONY : sample/DIDA/CMakeFiles/enclave-edlobj.dir/rule
 
 # Convenience name for target.
@@ -137,12 +137,12 @@ enclave-edlobj: sample/DIDA/CMakeFiles/enclave-edlobj.dir/rule
 
 # fast build rule for target.
 enclave-edlobj/fast:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/enclave-edlobj.dir/build.make sample/DIDA/CMakeFiles/enclave-edlobj.dir/build
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/enclave-edlobj.dir/build.make sample/DIDA/CMakeFiles/enclave-edlobj.dir/build
 .PHONY : enclave-edlobj/fast
 
 # Convenience name for target.
 sample/DIDA/CMakeFiles/enclave.dir/rule:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/enclave.dir/rule
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/enclave.dir/rule
 .PHONY : sample/DIDA/CMakeFiles/enclave.dir/rule
 
 # Convenience name for target.
@@ -152,12 +152,12 @@ enclave: sample/DIDA/CMakeFiles/enclave.dir/rule
 
 # fast build rule for target.
 enclave/fast:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/enclave.dir/build.make sample/DIDA/CMakeFiles/enclave.dir/build
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/enclave.dir/build.make sample/DIDA/CMakeFiles/enclave.dir/build
 .PHONY : enclave/fast
 
 # Convenience name for target.
 sample/DIDA/CMakeFiles/trusted_lib.dir/rule:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/trusted_lib.dir/rule
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/trusted_lib.dir/rule
 .PHONY : sample/DIDA/CMakeFiles/trusted_lib.dir/rule
 
 # Convenience name for target.
@@ -167,12 +167,12 @@ trusted_lib: sample/DIDA/CMakeFiles/trusted_lib.dir/rule
 
 # fast build rule for target.
 trusted_lib/fast:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/build
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/build
 .PHONY : trusted_lib/fast
 
 # Convenience name for target.
 sample/DIDA/CMakeFiles/didasgx.dir/rule:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/didasgx.dir/rule
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/didasgx.dir/rule
 .PHONY : sample/DIDA/CMakeFiles/didasgx.dir/rule
 
 # Convenience name for target.
@@ -182,12 +182,12 @@ didasgx: sample/DIDA/CMakeFiles/didasgx.dir/rule
 
 # fast build rule for target.
 didasgx/fast:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/build
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/build
 .PHONY : didasgx/fast
 
 # Convenience name for target.
 sample/DIDA/CMakeFiles/enclave-sign.dir/rule:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/enclave-sign.dir/rule
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/enclave-sign.dir/rule
 .PHONY : sample/DIDA/CMakeFiles/enclave-sign.dir/rule
 
 # Convenience name for target.
@@ -197,7 +197,7 @@ enclave-sign: sample/DIDA/CMakeFiles/enclave-sign.dir/rule
 
 # fast build rule for target.
 enclave-sign/fast:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/enclave-sign.dir/build.make sample/DIDA/CMakeFiles/enclave-sign.dir/build
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/enclave-sign.dir/build.make sample/DIDA/CMakeFiles/enclave-sign.dir/build
 .PHONY : enclave-sign/fast
 
 App/App.o: App/App.cpp.o
@@ -206,7 +206,7 @@ App/App.o: App/App.cpp.o
 
 # target to build an object file
 App/App.cpp.o:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.o
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.o
 .PHONY : App/App.cpp.o
 
 App/App.i: App/App.cpp.i
@@ -215,7 +215,7 @@ App/App.i: App/App.cpp.i
 
 # target to preprocess a source file
 App/App.cpp.i:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.i
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.i
 .PHONY : App/App.cpp.i
 
 App/App.s: App/App.cpp.s
@@ -224,7 +224,7 @@ App/App.s: App/App.cpp.s
 
 # target to generate assembly for a file
 App/App.cpp.s:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.s
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.s
 .PHONY : App/App.cpp.s
 
 App/TrustedLibrary/LibcxxDsp.o: App/TrustedLibrary/LibcxxDsp.cpp.o
@@ -233,7 +233,7 @@ App/TrustedLibrary/LibcxxDsp.o: App/TrustedLibrary/LibcxxDsp.cpp.o
 
 # target to build an object file
 App/TrustedLibrary/LibcxxDsp.cpp.o:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o
 .PHONY : App/TrustedLibrary/LibcxxDsp.cpp.o
 
 App/TrustedLibrary/LibcxxDsp.i: App/TrustedLibrary/LibcxxDsp.cpp.i
@@ -242,7 +242,7 @@ App/TrustedLibrary/LibcxxDsp.i: App/TrustedLibrary/LibcxxDsp.cpp.i
 
 # target to preprocess a source file
 App/TrustedLibrary/LibcxxDsp.cpp.i:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.i
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.i
 .PHONY : App/TrustedLibrary/LibcxxDsp.cpp.i
 
 App/TrustedLibrary/LibcxxDsp.s: App/TrustedLibrary/LibcxxDsp.cpp.s
@@ -251,7 +251,7 @@ App/TrustedLibrary/LibcxxDsp.s: App/TrustedLibrary/LibcxxDsp.cpp.s
 
 # target to generate assembly for a file
 App/TrustedLibrary/LibcxxDsp.cpp.s:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.s
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.s
 .PHONY : App/TrustedLibrary/LibcxxDsp.cpp.s
 
 App/TrustedLibrary/LibcxxMrg.o: App/TrustedLibrary/LibcxxMrg.cpp.o
@@ -260,7 +260,7 @@ App/TrustedLibrary/LibcxxMrg.o: App/TrustedLibrary/LibcxxMrg.cpp.o
 
 # target to build an object file
 App/TrustedLibrary/LibcxxMrg.cpp.o:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.o
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.o
 .PHONY : App/TrustedLibrary/LibcxxMrg.cpp.o
 
 App/TrustedLibrary/LibcxxMrg.i: App/TrustedLibrary/LibcxxMrg.cpp.i
@@ -269,7 +269,7 @@ App/TrustedLibrary/LibcxxMrg.i: App/TrustedLibrary/LibcxxMrg.cpp.i
 
 # target to preprocess a source file
 App/TrustedLibrary/LibcxxMrg.cpp.i:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.i
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.i
 .PHONY : App/TrustedLibrary/LibcxxMrg.cpp.i
 
 App/TrustedLibrary/LibcxxMrg.s: App/TrustedLibrary/LibcxxMrg.cpp.s
@@ -278,7 +278,7 @@ App/TrustedLibrary/LibcxxMrg.s: App/TrustedLibrary/LibcxxMrg.cpp.s
 
 # target to generate assembly for a file
 App/TrustedLibrary/LibcxxMrg.cpp.s:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.s
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.s
 .PHONY : App/TrustedLibrary/LibcxxMrg.cpp.s
 
 Enclave/Enclave.o: Enclave/Enclave.cpp.o
@@ -287,7 +287,7 @@ Enclave/Enclave.o: Enclave/Enclave.cpp.o
 
 # target to build an object file
 Enclave/Enclave.cpp.o:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/enclave.dir/build.make sample/DIDA/CMakeFiles/enclave.dir/Enclave/Enclave.cpp.o
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/enclave.dir/build.make sample/DIDA/CMakeFiles/enclave.dir/Enclave/Enclave.cpp.o
 .PHONY : Enclave/Enclave.cpp.o
 
 Enclave/Enclave.i: Enclave/Enclave.cpp.i
@@ -296,7 +296,7 @@ Enclave/Enclave.i: Enclave/Enclave.cpp.i
 
 # target to preprocess a source file
 Enclave/Enclave.cpp.i:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/enclave.dir/build.make sample/DIDA/CMakeFiles/enclave.dir/Enclave/Enclave.cpp.i
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/enclave.dir/build.make sample/DIDA/CMakeFiles/enclave.dir/Enclave/Enclave.cpp.i
 .PHONY : Enclave/Enclave.cpp.i
 
 Enclave/Enclave.s: Enclave/Enclave.cpp.s
@@ -305,7 +305,7 @@ Enclave/Enclave.s: Enclave/Enclave.cpp.s
 
 # target to generate assembly for a file
 Enclave/Enclave.cpp.s:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/enclave.dir/build.make sample/DIDA/CMakeFiles/enclave.dir/Enclave/Enclave.cpp.s
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/enclave.dir/build.make sample/DIDA/CMakeFiles/enclave.dir/Enclave/Enclave.cpp.s
 .PHONY : Enclave/Enclave.cpp.s
 
 Enclave/TrustedLibrary/LibcxxDsp.o: Enclave/TrustedLibrary/LibcxxDsp.cpp.o
@@ -314,7 +314,7 @@ Enclave/TrustedLibrary/LibcxxDsp.o: Enclave/TrustedLibrary/LibcxxDsp.cpp.o
 
 # target to build an object file
 Enclave/TrustedLibrary/LibcxxDsp.cpp.o:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/LibcxxDsp.cpp.o
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/LibcxxDsp.cpp.o
 .PHONY : Enclave/TrustedLibrary/LibcxxDsp.cpp.o
 
 Enclave/TrustedLibrary/LibcxxDsp.i: Enclave/TrustedLibrary/LibcxxDsp.cpp.i
@@ -323,7 +323,7 @@ Enclave/TrustedLibrary/LibcxxDsp.i: Enclave/TrustedLibrary/LibcxxDsp.cpp.i
 
 # target to preprocess a source file
 Enclave/TrustedLibrary/LibcxxDsp.cpp.i:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/LibcxxDsp.cpp.i
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/LibcxxDsp.cpp.i
 .PHONY : Enclave/TrustedLibrary/LibcxxDsp.cpp.i
 
 Enclave/TrustedLibrary/LibcxxDsp.s: Enclave/TrustedLibrary/LibcxxDsp.cpp.s
@@ -332,7 +332,7 @@ Enclave/TrustedLibrary/LibcxxDsp.s: Enclave/TrustedLibrary/LibcxxDsp.cpp.s
 
 # target to generate assembly for a file
 Enclave/TrustedLibrary/LibcxxDsp.cpp.s:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/LibcxxDsp.cpp.s
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/LibcxxDsp.cpp.s
 .PHONY : Enclave/TrustedLibrary/LibcxxDsp.cpp.s
 
 Enclave/TrustedLibrary/LibcxxMrg.o: Enclave/TrustedLibrary/LibcxxMrg.cpp.o
@@ -341,7 +341,7 @@ Enclave/TrustedLibrary/LibcxxMrg.o: Enclave/TrustedLibrary/LibcxxMrg.cpp.o
 
 # target to build an object file
 Enclave/TrustedLibrary/LibcxxMrg.cpp.o:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/LibcxxMrg.cpp.o
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/LibcxxMrg.cpp.o
 .PHONY : Enclave/TrustedLibrary/LibcxxMrg.cpp.o
 
 Enclave/TrustedLibrary/LibcxxMrg.i: Enclave/TrustedLibrary/LibcxxMrg.cpp.i
@@ -350,7 +350,7 @@ Enclave/TrustedLibrary/LibcxxMrg.i: Enclave/TrustedLibrary/LibcxxMrg.cpp.i
 
 # target to preprocess a source file
 Enclave/TrustedLibrary/LibcxxMrg.cpp.i:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/LibcxxMrg.cpp.i
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/LibcxxMrg.cpp.i
 .PHONY : Enclave/TrustedLibrary/LibcxxMrg.cpp.i
 
 Enclave/TrustedLibrary/LibcxxMrg.s: Enclave/TrustedLibrary/LibcxxMrg.cpp.s
@@ -359,7 +359,7 @@ Enclave/TrustedLibrary/LibcxxMrg.s: Enclave/TrustedLibrary/LibcxxMrg.cpp.s
 
 # target to generate assembly for a file
 Enclave/TrustedLibrary/LibcxxMrg.cpp.s:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/LibcxxMrg.cpp.s
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/LibcxxMrg.cpp.s
 .PHONY : Enclave/TrustedLibrary/LibcxxMrg.cpp.s
 
 Enclave/TrustedLibrary/Sealing.o: Enclave/TrustedLibrary/Sealing.cpp.o
@@ -368,7 +368,7 @@ Enclave/TrustedLibrary/Sealing.o: Enclave/TrustedLibrary/Sealing.cpp.o
 
 # target to build an object file
 Enclave/TrustedLibrary/Sealing.cpp.o:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/Sealing.cpp.o
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/Sealing.cpp.o
 .PHONY : Enclave/TrustedLibrary/Sealing.cpp.o
 
 Enclave/TrustedLibrary/Sealing.i: Enclave/TrustedLibrary/Sealing.cpp.i
@@ -377,7 +377,7 @@ Enclave/TrustedLibrary/Sealing.i: Enclave/TrustedLibrary/Sealing.cpp.i
 
 # target to preprocess a source file
 Enclave/TrustedLibrary/Sealing.cpp.i:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/Sealing.cpp.i
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/Sealing.cpp.i
 .PHONY : Enclave/TrustedLibrary/Sealing.cpp.i
 
 Enclave/TrustedLibrary/Sealing.s: Enclave/TrustedLibrary/Sealing.cpp.s
@@ -386,8 +386,35 @@ Enclave/TrustedLibrary/Sealing.s: Enclave/TrustedLibrary/Sealing.cpp.s
 
 # target to generate assembly for a file
 Enclave/TrustedLibrary/Sealing.cpp.s:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/Sealing.cpp.s
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/Sealing.cpp.s
 .PHONY : Enclave/TrustedLibrary/Sealing.cpp.s
+
+Enclave/TrustedLibrary/aesgcm.o: Enclave/TrustedLibrary/aesgcm.cpp.o
+
+.PHONY : Enclave/TrustedLibrary/aesgcm.o
+
+# target to build an object file
+Enclave/TrustedLibrary/aesgcm.cpp.o:
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/aesgcm.cpp.o
+.PHONY : Enclave/TrustedLibrary/aesgcm.cpp.o
+
+Enclave/TrustedLibrary/aesgcm.i: Enclave/TrustedLibrary/aesgcm.cpp.i
+
+.PHONY : Enclave/TrustedLibrary/aesgcm.i
+
+# target to preprocess a source file
+Enclave/TrustedLibrary/aesgcm.cpp.i:
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/aesgcm.cpp.i
+.PHONY : Enclave/TrustedLibrary/aesgcm.cpp.i
+
+Enclave/TrustedLibrary/aesgcm.s: Enclave/TrustedLibrary/aesgcm.cpp.s
+
+.PHONY : Enclave/TrustedLibrary/aesgcm.s
+
+# target to generate assembly for a file
+Enclave/TrustedLibrary/aesgcm.cpp.s:
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/Enclave/TrustedLibrary/aesgcm.cpp.s
+.PHONY : Enclave/TrustedLibrary/aesgcm.cpp.s
 
 Enclave_t.o: Enclave_t.c.o
 
@@ -395,8 +422,8 @@ Enclave_t.o: Enclave_t.c.o
 
 # target to build an object file
 Enclave_t.c.o:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/build.make sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.o
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/enclave-edlobj.dir/build.make sample/DIDA/CMakeFiles/enclave-edlobj.dir/Enclave_t.c.o
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/build.make sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.o
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/enclave-edlobj.dir/build.make sample/DIDA/CMakeFiles/enclave-edlobj.dir/Enclave_t.c.o
 .PHONY : Enclave_t.c.o
 
 Enclave_t.i: Enclave_t.c.i
@@ -405,8 +432,8 @@ Enclave_t.i: Enclave_t.c.i
 
 # target to preprocess a source file
 Enclave_t.c.i:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/build.make sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.i
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/enclave-edlobj.dir/build.make sample/DIDA/CMakeFiles/enclave-edlobj.dir/Enclave_t.c.i
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/build.make sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.i
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/enclave-edlobj.dir/build.make sample/DIDA/CMakeFiles/enclave-edlobj.dir/Enclave_t.c.i
 .PHONY : Enclave_t.c.i
 
 Enclave_t.s: Enclave_t.c.s
@@ -415,8 +442,8 @@ Enclave_t.s: Enclave_t.c.s
 
 # target to generate assembly for a file
 Enclave_t.c.s:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/build.make sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.s
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/enclave-edlobj.dir/build.make sample/DIDA/CMakeFiles/enclave-edlobj.dir/Enclave_t.c.s
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/build.make sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/Enclave_t.c.s
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/enclave-edlobj.dir/build.make sample/DIDA/CMakeFiles/enclave-edlobj.dir/Enclave_t.c.s
 .PHONY : Enclave_t.c.s
 
 Enclave_u.o: Enclave_u.c.o
@@ -425,7 +452,7 @@ Enclave_u.o: Enclave_u.c.o
 
 # target to build an object file
 Enclave_u.c.o:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/Enclave_u.c.o
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/Enclave_u.c.o
 .PHONY : Enclave_u.c.o
 
 Enclave_u.i: Enclave_u.c.i
@@ -434,7 +461,7 @@ Enclave_u.i: Enclave_u.c.i
 
 # target to preprocess a source file
 Enclave_u.c.i:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/Enclave_u.c.i
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/Enclave_u.c.i
 .PHONY : Enclave_u.c.i
 
 Enclave_u.s: Enclave_u.c.s
@@ -443,7 +470,7 @@ Enclave_u.s: Enclave_u.c.s
 
 # target to generate assembly for a file
 Enclave_u.c.s:
-	cd /home/dajiejie/dida-sgx && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/Enclave_u.c.s
+	cd /home/dajiejie/dida-sgx-sealing && $(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/Enclave_u.c.s
 .PHONY : Enclave_u.c.s
 
 # Help Target
@@ -481,6 +508,9 @@ help:
 	@echo "... Enclave/TrustedLibrary/Sealing.o"
 	@echo "... Enclave/TrustedLibrary/Sealing.i"
 	@echo "... Enclave/TrustedLibrary/Sealing.s"
+	@echo "... Enclave/TrustedLibrary/aesgcm.o"
+	@echo "... Enclave/TrustedLibrary/aesgcm.i"
+	@echo "... Enclave/TrustedLibrary/aesgcm.s"
 	@echo "... Enclave_t.o"
 	@echo "... Enclave_t.i"
 	@echo "... Enclave_t.s"
@@ -498,6 +528,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/dajiejie/dida-sgx && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/dajiejie/dida-sgx-sealing && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -9,7 +9,7 @@ message("SGX HW : ${SGX_HW}")
 
 
 set(E_SRCS Enclave/Enclave.cpp)
-set(T_SRCS Enclave/TrustedLibrary/LibcxxDsp.cpp Enclave/TrustedLibrary/LibcxxMrg.cpp Enclave/TrustedLibrary/Sealing.cpp)
+set(T_SRCS Enclave/TrustedLibrary/LibcxxDsp.cpp Enclave/TrustedLibrary/LibcxxMrg.cpp Enclave/TrustedLibrary/Sealing.cpp Enclave/TrustedLibrary/aesgcm.cpp)
 if (SGX_HW AND SGX_MODE STREQUAL "Release")
     set(LDS Enclave/Enclave.lds)
 else ()

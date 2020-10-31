@@ -327,6 +327,7 @@ void dispatchRead(char *sequence1, int seq1_len, char *sequence2, int seq2_len)
         std::string file_name = "mread-" + std::to_string(i) + ".fa";
 
         //sealing
+        printf("sealing size %d of rdFiles[%d]...\n", rdFiles[i].size(), i);
         size_t plaintext_len = rdFiles[i].size() + 1;
         uint8_t *plaintext = (uint8_t *)rdFiles[i].c_str();
         size_t sealed_size = sizeof(sgx_sealed_data_t) + plaintext_len;
@@ -384,12 +385,12 @@ void ecall_load_sealed_data2(sgx_sealed_data_t *sealed_data1, size_t sealed_size
 {
     // do decryption of both seq here
     char *data1 = (char *)malloc(len1 + 1);
-    uint8_t *plaintext1 = (uint8_t *)&data1;
+    uint8_t *plaintext1 = (uint8_t *)data1;
     uint32_t plaintext_len1 = len1 + 1;
     unseal(sealed_data1, sealed_size1, plaintext1, plaintext_len1);
 
     char *data2 = (char *)malloc(len2 + 1);
-    uint8_t *plaintext2 = (uint8_t *)&data2;
+    uint8_t *plaintext2 = (uint8_t *)data2;
     uint32_t plaintext_len2 = len2 + 1;
     unseal(sealed_data2, sealed_size2, plaintext2, plaintext_len2);
 

@@ -1,6 +1,7 @@
 #include "sgx_trts.h"
 #include "sgx_tseal.h"
 #include "string.h"
+
 #include "Enclave_t.h"
 
 /**

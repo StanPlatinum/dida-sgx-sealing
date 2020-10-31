@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/dajiejie/dida-sgx/sample/DIDA/Enclave_u.c" "/home/dajiejie/dida-sgx/sample/DIDA/CMakeFiles/didasgx.dir/Enclave_u.c.o"
+  "/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave_u.c" "/home/dajiejie/dida-sgx-sealing/sample/DIDA/CMakeFiles/didasgx.dir/Enclave_u.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -16,9 +16,9 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "/opt/intel/sgxsdk/include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/dajiejie/dida-sgx/sample/DIDA/App/App.cpp" "/home/dajiejie/dida-sgx/sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.o"
-  "/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/LibcxxDsp.cpp" "/home/dajiejie/dida-sgx/sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o"
-  "/home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/LibcxxMrg.cpp" "/home/dajiejie/dida-sgx/sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.o"
+  "/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/App.cpp" "/home/dajiejie/dida-sgx-sealing/sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.o"
+  "/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/LibcxxDsp.cpp" "/home/dajiejie/dida-sgx-sealing/sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o"
+  "/home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/LibcxxMrg.cpp" "/home/dajiejie/dida-sgx-sealing/sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dajiejie/dida-sgx
+CMAKE_SOURCE_DIR = /home/dajiejie/dida-sgx-sealing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dajiejie/dida-sgx
+CMAKE_BINARY_DIR = /home/dajiejie/dida-sgx-sealing
 
 #=============================================================================
 # Directory level rules for directory sample
@@ -112,7 +112,7 @@ sample/DIDA/preinstall:
 sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/all:
 	$(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/build.make sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/depend
 	$(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/build.make sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dajiejie/dida-sgx/CMakeFiles --progress-num=15,16 "Built target trusted_lib-edlobj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dajiejie/dida-sgx-sealing/CMakeFiles --progress-num=16,17 "Built target trusted_lib-edlobj"
 .PHONY : sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/all
 
 # Include target in all.
@@ -122,9 +122,9 @@ all: sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/all
 
 # Build rule for subdir invocation for target.
 sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx-sealing/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx-sealing/CMakeFiles 0
 .PHONY : sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/rule
 
 # Convenience name for target.
@@ -149,7 +149,7 @@ clean: sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/clean
 sample/DIDA/CMakeFiles/enclave-edlobj.dir/all:
 	$(MAKE) -f sample/DIDA/CMakeFiles/enclave-edlobj.dir/build.make sample/DIDA/CMakeFiles/enclave-edlobj.dir/depend
 	$(MAKE) -f sample/DIDA/CMakeFiles/enclave-edlobj.dir/build.make sample/DIDA/CMakeFiles/enclave-edlobj.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dajiejie/dida-sgx/CMakeFiles --progress-num=9,10 "Built target enclave-edlobj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dajiejie/dida-sgx-sealing/CMakeFiles --progress-num=9,10 "Built target enclave-edlobj"
 .PHONY : sample/DIDA/CMakeFiles/enclave-edlobj.dir/all
 
 # Include target in all.
@@ -159,9 +159,9 @@ all: sample/DIDA/CMakeFiles/enclave-edlobj.dir/all
 
 # Build rule for subdir invocation for target.
 sample/DIDA/CMakeFiles/enclave-edlobj.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx-sealing/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/enclave-edlobj.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx-sealing/CMakeFiles 0
 .PHONY : sample/DIDA/CMakeFiles/enclave-edlobj.dir/rule
 
 # Convenience name for target.
@@ -187,7 +187,7 @@ sample/DIDA/CMakeFiles/enclave.dir/all: sample/DIDA/CMakeFiles/trusted_lib.dir/a
 sample/DIDA/CMakeFiles/enclave.dir/all: sample/DIDA/CMakeFiles/enclave-edlobj.dir/all
 	$(MAKE) -f sample/DIDA/CMakeFiles/enclave.dir/build.make sample/DIDA/CMakeFiles/enclave.dir/depend
 	$(MAKE) -f sample/DIDA/CMakeFiles/enclave.dir/build.make sample/DIDA/CMakeFiles/enclave.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dajiejie/dida-sgx/CMakeFiles --progress-num=7,8 "Built target enclave"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dajiejie/dida-sgx-sealing/CMakeFiles --progress-num=7,8 "Built target enclave"
 .PHONY : sample/DIDA/CMakeFiles/enclave.dir/all
 
 # Include target in all.
@@ -197,9 +197,9 @@ all: sample/DIDA/CMakeFiles/enclave.dir/all
 
 # Build rule for subdir invocation for target.
 sample/DIDA/CMakeFiles/enclave.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx-sealing/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/enclave.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx-sealing/CMakeFiles 0
 .PHONY : sample/DIDA/CMakeFiles/enclave.dir/rule
 
 # Convenience name for target.
@@ -224,7 +224,7 @@ clean: sample/DIDA/CMakeFiles/enclave.dir/clean
 sample/DIDA/CMakeFiles/trusted_lib.dir/all: sample/DIDA/CMakeFiles/trusted_lib-edlobj.dir/all
 	$(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/depend
 	$(MAKE) -f sample/DIDA/CMakeFiles/trusted_lib.dir/build.make sample/DIDA/CMakeFiles/trusted_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dajiejie/dida-sgx/CMakeFiles --progress-num=11,12,13,14 "Built target trusted_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dajiejie/dida-sgx-sealing/CMakeFiles --progress-num=11,12,13,14,15 "Built target trusted_lib"
 .PHONY : sample/DIDA/CMakeFiles/trusted_lib.dir/all
 
 # Include target in all.
@@ -234,9 +234,9 @@ all: sample/DIDA/CMakeFiles/trusted_lib.dir/all
 
 # Build rule for subdir invocation for target.
 sample/DIDA/CMakeFiles/trusted_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx-sealing/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/trusted_lib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx-sealing/CMakeFiles 0
 .PHONY : sample/DIDA/CMakeFiles/trusted_lib.dir/rule
 
 # Convenience name for target.
@@ -261,7 +261,7 @@ clean: sample/DIDA/CMakeFiles/trusted_lib.dir/clean
 sample/DIDA/CMakeFiles/didasgx.dir/all: sample/DIDA/CMakeFiles/enclave-sign.dir/all
 	$(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/depend
 	$(MAKE) -f sample/DIDA/CMakeFiles/didasgx.dir/build.make sample/DIDA/CMakeFiles/didasgx.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dajiejie/dida-sgx/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target didasgx"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dajiejie/dida-sgx-sealing/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target didasgx"
 .PHONY : sample/DIDA/CMakeFiles/didasgx.dir/all
 
 # Include target in all.
@@ -271,9 +271,9 @@ all: sample/DIDA/CMakeFiles/didasgx.dir/all
 
 # Build rule for subdir invocation for target.
 sample/DIDA/CMakeFiles/didasgx.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx-sealing/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/didasgx.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx-sealing/CMakeFiles 0
 .PHONY : sample/DIDA/CMakeFiles/didasgx.dir/rule
 
 # Convenience name for target.
@@ -298,7 +298,7 @@ clean: sample/DIDA/CMakeFiles/didasgx.dir/clean
 sample/DIDA/CMakeFiles/enclave-sign.dir/all: sample/DIDA/CMakeFiles/enclave.dir/all
 	$(MAKE) -f sample/DIDA/CMakeFiles/enclave-sign.dir/build.make sample/DIDA/CMakeFiles/enclave-sign.dir/depend
 	$(MAKE) -f sample/DIDA/CMakeFiles/enclave-sign.dir/build.make sample/DIDA/CMakeFiles/enclave-sign.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dajiejie/dida-sgx/CMakeFiles --progress-num= "Built target enclave-sign"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dajiejie/dida-sgx-sealing/CMakeFiles --progress-num= "Built target enclave-sign"
 .PHONY : sample/DIDA/CMakeFiles/enclave-sign.dir/all
 
 # Include target in all.
@@ -308,9 +308,9 @@ all: sample/DIDA/CMakeFiles/enclave-sign.dir/all
 
 # Build rule for subdir invocation for target.
 sample/DIDA/CMakeFiles/enclave-sign.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx-sealing/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 sample/DIDA/CMakeFiles/enclave-sign.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dajiejie/dida-sgx-sealing/CMakeFiles 0
 .PHONY : sample/DIDA/CMakeFiles/enclave-sign.dir/rule
 
 # Convenience name for target.

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dajiejie/dida-sgx
+CMAKE_SOURCE_DIR = /home/dajiejie/dida-sgx-sealing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dajiejie/dida-sgx
+CMAKE_BINARY_DIR = /home/dajiejie/dida-sgx-sealing
 
 # Include any dependencies generated for this target.
 include sample/DIDA/CMakeFiles/didasgx.dir/depend.make
@@ -58,21 +58,21 @@ include sample/DIDA/CMakeFiles/didasgx.dir/progress.make
 include sample/DIDA/CMakeFiles/didasgx.dir/flags.make
 
 sample/DIDA/Enclave_u.c: sample/DIDA/Enclave/Enclave.edl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dajiejie/dida-sgx/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Enclave_u.c"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /opt/intel/sgxsdk/bin/x64/sgx_edger8r --untrusted /home/dajiejie/dida-sgx/sample/DIDA/Enclave/Enclave.edl --search-path /home/dajiejie/dida-sgx/sample/DIDA/Enclave:/home/dajiejie/dida-sgx/sample/DIDA/Enclave/TrustedLibrary:/opt/intel/sgxsdk/include
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dajiejie/dida-sgx-sealing/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Enclave_u.c"
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /opt/intel/sgxsdk/bin/x64/sgx_edger8r --untrusted /home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/Enclave.edl --search-path /home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave:/home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave/TrustedLibrary:/opt/intel/sgxsdk/include
 
 sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.o: sample/DIDA/CMakeFiles/didasgx.dir/flags.make
 sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.o: sample/DIDA/App/App.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dajiejie/dida-sgx/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.o"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/didasgx.dir/App/App.cpp.o -c /home/dajiejie/dida-sgx/sample/DIDA/App/App.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dajiejie/dida-sgx-sealing/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.o"
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/didasgx.dir/App/App.cpp.o -c /home/dajiejie/dida-sgx-sealing/sample/DIDA/App/App.cpp
 
 sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/didasgx.dir/App/App.cpp.i"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dajiejie/dida-sgx/sample/DIDA/App/App.cpp > CMakeFiles/didasgx.dir/App/App.cpp.i
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dajiejie/dida-sgx-sealing/sample/DIDA/App/App.cpp > CMakeFiles/didasgx.dir/App/App.cpp.i
 
 sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/didasgx.dir/App/App.cpp.s"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dajiejie/dida-sgx/sample/DIDA/App/App.cpp -o CMakeFiles/didasgx.dir/App/App.cpp.s
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dajiejie/dida-sgx-sealing/sample/DIDA/App/App.cpp -o CMakeFiles/didasgx.dir/App/App.cpp.s
 
 sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.o.requires:
 
@@ -87,16 +87,16 @@ sample/DIDA/CMakeFiles/didasgx.dir/App/App.cpp.o.provides.build: sample/DIDA/CMa
 
 sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o: sample/DIDA/CMakeFiles/didasgx.dir/flags.make
 sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o: sample/DIDA/App/TrustedLibrary/LibcxxDsp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dajiejie/dida-sgx/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o -c /home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/LibcxxDsp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dajiejie/dida-sgx-sealing/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o"
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o -c /home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/LibcxxDsp.cpp
 
 sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.i"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/LibcxxDsp.cpp > CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.i
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/LibcxxDsp.cpp > CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.i
 
 sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.s"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/LibcxxDsp.cpp -o CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.s
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/LibcxxDsp.cpp -o CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.s
 
 sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o.requires:
 
@@ -111,16 +111,16 @@ sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxDsp.cpp.o.provides.b
 
 sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.o: sample/DIDA/CMakeFiles/didasgx.dir/flags.make
 sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.o: sample/DIDA/App/TrustedLibrary/LibcxxMrg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dajiejie/dida-sgx/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.o"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.o -c /home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/LibcxxMrg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dajiejie/dida-sgx-sealing/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.o"
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.o -c /home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/LibcxxMrg.cpp
 
 sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.i"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/LibcxxMrg.cpp > CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.i
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/LibcxxMrg.cpp > CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.i
 
 sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.s"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dajiejie/dida-sgx/sample/DIDA/App/TrustedLibrary/LibcxxMrg.cpp -o CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.s
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dajiejie/dida-sgx-sealing/sample/DIDA/App/TrustedLibrary/LibcxxMrg.cpp -o CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.s
 
 sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.o.requires:
 
@@ -135,16 +135,16 @@ sample/DIDA/CMakeFiles/didasgx.dir/App/TrustedLibrary/LibcxxMrg.cpp.o.provides.b
 
 sample/DIDA/CMakeFiles/didasgx.dir/Enclave_u.c.o: sample/DIDA/CMakeFiles/didasgx.dir/flags.make
 sample/DIDA/CMakeFiles/didasgx.dir/Enclave_u.c.o: sample/DIDA/Enclave_u.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dajiejie/dida-sgx/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object sample/DIDA/CMakeFiles/didasgx.dir/Enclave_u.c.o"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/didasgx.dir/Enclave_u.c.o   -c /home/dajiejie/dida-sgx/sample/DIDA/Enclave_u.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dajiejie/dida-sgx-sealing/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object sample/DIDA/CMakeFiles/didasgx.dir/Enclave_u.c.o"
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/didasgx.dir/Enclave_u.c.o   -c /home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave_u.c
 
 sample/DIDA/CMakeFiles/didasgx.dir/Enclave_u.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/didasgx.dir/Enclave_u.c.i"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dajiejie/dida-sgx/sample/DIDA/Enclave_u.c > CMakeFiles/didasgx.dir/Enclave_u.c.i
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave_u.c > CMakeFiles/didasgx.dir/Enclave_u.c.i
 
 sample/DIDA/CMakeFiles/didasgx.dir/Enclave_u.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/didasgx.dir/Enclave_u.c.s"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dajiejie/dida-sgx/sample/DIDA/Enclave_u.c -o CMakeFiles/didasgx.dir/Enclave_u.c.s
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dajiejie/dida-sgx-sealing/sample/DIDA/Enclave_u.c -o CMakeFiles/didasgx.dir/Enclave_u.c.s
 
 sample/DIDA/CMakeFiles/didasgx.dir/Enclave_u.c.o.requires:
 
@@ -177,8 +177,8 @@ sample/DIDA/didasgx: dida/dida/Common/dsp-Uncompress.o
 sample/DIDA/didasgx: dida/dida/Common/dsp-SignalHandler.o
 sample/DIDA/didasgx: dida/dida/Common/dsp-Fcontrol.o
 sample/DIDA/didasgx: sample/DIDA/CMakeFiles/didasgx.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dajiejie/dida-sgx/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable didasgx"
-	cd /home/dajiejie/dida-sgx/sample/DIDA && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/didasgx.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dajiejie/dida-sgx-sealing/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable didasgx"
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/didasgx.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 sample/DIDA/CMakeFiles/didasgx.dir/build: sample/DIDA/didasgx
@@ -193,10 +193,10 @@ sample/DIDA/CMakeFiles/didasgx.dir/requires: sample/DIDA/CMakeFiles/didasgx.dir/
 .PHONY : sample/DIDA/CMakeFiles/didasgx.dir/requires
 
 sample/DIDA/CMakeFiles/didasgx.dir/clean:
-	cd /home/dajiejie/dida-sgx/sample/DIDA && $(CMAKE_COMMAND) -P CMakeFiles/didasgx.dir/cmake_clean.cmake
+	cd /home/dajiejie/dida-sgx-sealing/sample/DIDA && $(CMAKE_COMMAND) -P CMakeFiles/didasgx.dir/cmake_clean.cmake
 .PHONY : sample/DIDA/CMakeFiles/didasgx.dir/clean
 
 sample/DIDA/CMakeFiles/didasgx.dir/depend: sample/DIDA/Enclave_u.c
-	cd /home/dajiejie/dida-sgx && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dajiejie/dida-sgx /home/dajiejie/dida-sgx/sample/DIDA /home/dajiejie/dida-sgx /home/dajiejie/dida-sgx/sample/DIDA /home/dajiejie/dida-sgx/sample/DIDA/CMakeFiles/didasgx.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dajiejie/dida-sgx-sealing && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dajiejie/dida-sgx-sealing /home/dajiejie/dida-sgx-sealing/sample/DIDA /home/dajiejie/dida-sgx-sealing /home/dajiejie/dida-sgx-sealing/sample/DIDA /home/dajiejie/dida-sgx-sealing/sample/DIDA/CMakeFiles/didasgx.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : sample/DIDA/CMakeFiles/didasgx.dir/depend
 
