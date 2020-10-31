@@ -183,8 +183,8 @@ clean: sample/DIDA/CMakeFiles/enclave-edlobj.dir/clean
 # Target rules for target sample/DIDA/CMakeFiles/enclave.dir
 
 # All Build rule for target.
-sample/DIDA/CMakeFiles/enclave.dir/all: sample/DIDA/CMakeFiles/trusted_lib.dir/all
 sample/DIDA/CMakeFiles/enclave.dir/all: sample/DIDA/CMakeFiles/enclave-edlobj.dir/all
+sample/DIDA/CMakeFiles/enclave.dir/all: sample/DIDA/CMakeFiles/trusted_lib.dir/all
 	$(MAKE) -f sample/DIDA/CMakeFiles/enclave.dir/build.make sample/DIDA/CMakeFiles/enclave.dir/depend
 	$(MAKE) -f sample/DIDA/CMakeFiles/enclave.dir/build.make sample/DIDA/CMakeFiles/enclave.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dajiejie/dida-sgx-sealing/CMakeFiles --progress-num=7,8 "Built target enclave"
