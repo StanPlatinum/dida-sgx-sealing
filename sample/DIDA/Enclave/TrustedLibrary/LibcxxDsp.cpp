@@ -361,6 +361,21 @@ void ecall_finalize_dispatch()
     //delete data;
 }
 
+void ecall_load_encrypted_data(char *encrypted_data, size_t encrypted_size, int seq_len)
+{
+    // do decryption
+    char *data_seq = (char *)malloc(seq_len + 1);
+    char *plaintext = data_seq;
+    uint32_t plaintext_len = seq_len + 1;
+    decryptMessage(encrypted_data, encrypted_size, plaintext, plaintext_len);
+    plaintext[seq_len] = '\0';
+    printf("in enclave, plaintext_len: %ld\n", plaintext_len);
+
+    printf("Dispatching read of length : %d, pnum: %d\n", seq_len, pnum);
+    //(data_seq, seq_len, nullptr, 0);
+    dispatchRead(data_seq, plaintext_len, nullptr, 0);
+}
+
 void ecall_load_sealed_data(sgx_sealed_data_t *sealed_data, size_t sealed_size, int seq_len)
 {
     // do decryption

@@ -223,22 +223,35 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid)
         // timing
         struct myclock c1, c2;
 
-        uint8_t *unsealed_data = (uint8_t *)(const_cast<char *>(str.c_str()));
-        size_t unsealed_data_length = str.length() + 1;
+        // uint8_t *unsealed_data = (uint8_t *)(const_cast<char *>(str.c_str()));
+        // size_t unsealed_data_length = str.length() + 1;
+
+        // The encrypted message will contain the MAC, the IV, and the encrypted message itself.
+        char *message = const_cast<char *>(str.c_str());
+        size_t encMessageLen = (SGX_AESGCM_MAC_SIZE + SGX_AESGCM_IV_SIZE + strlen(message));
+        char *encMessage = (char *)malloc((encMessageLen + 1) * sizeof(char));
+
         // seal the data
+        printf("Encrypting...\n");
+
         START_TSC(c1);
 
-        size_t sealed_size = sizeof(sgx_sealed_data_t) + unsealed_data_length;
-        uint8_t *sealed_data = (uint8_t *)malloc(sealed_size);
+        // size_t sealed_size = sizeof(sgx_sealed_data_t) + unsealed_data_length;
+        // uint8_t *sealed_data = (uint8_t *)malloc(sealed_size);
         sgx_status_t ecall_status;
-        seal(global_eid, &ecall_status,
-             unsealed_data, unsealed_data_length,
-             (sgx_sealed_data_t *)sealed_data, sealed_size);
+        // seal(global_eid, &ecall_status,
+        //      unsealed_data, unsealed_data_length,
+        //      (sgx_sealed_data_t *)sealed_data, sealed_size);
+
+        ecall_status = encryptMessage(global_eid, message, strlen(message), encMessage, encMessageLen);
+        encMessage[encMessageLen] = '\0';
 
         END_TSC(c1);
         printf("--------sealing time cost %ld cycles--------\n", c1.ticks);
-        printf("unsealed data length: %ld\n", unsealed_data_length);
-        printf("sealed size: %ld\n", sealed_size);
+
+        // printf("unsealed data length: %ld\n", unsealed_data_length);
+        // printf("sealed size: %ld\n", sealed_size);
+        printf("Encrypted message length: %s\n", encMessageLen);
 
         if (ecall_status != SGX_SUCCESS)
         {
@@ -252,8 +265,8 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid)
 
         START_TSC(c2);
 
-        sgx_status_t ret = ecall_load_sealed_data(global_eid, (sgx_sealed_data_t *)sealed_data, sealed_size, str.length());
-        //sgx_status_t ret = ecall_load_data(global_eid, const_cast<char *>(str.c_str()), str.length());
+        // sgx_status_t ret = ecall_load_sealed_data(global_eid, (sgx_sealed_data_t *)sealed_data, sealed_size, str.length());
+        sgx_status_t ret = ecall_load_data(global_eid, const_cast<char *>(str.c_str()), str.length());
 
         END_TSC(c2);
         printf("--------ecall_load and unsealing time cost %ld cycles--------\n", c2.ticks);
@@ -307,8 +320,8 @@ void dsp(int argc, char *argv[], sgx_enclave_id_t global_eid)
             printf("sealing error...\n");
         }
         sgx_status_t ret = ecall_load_sealed_data2(global_eid,
-                                            (sgx_sealed_data_t *)sealed_data1, sealed_size1, str1.length(),
-                                            (sgx_sealed_data_t *)sealed_data2, sealed_size2, str2.length());
+                                                   (sgx_sealed_data_t *)sealed_data1, sealed_size1, str1.length(),
+                                                   (sgx_sealed_data_t *)sealed_data2, sealed_size2, str2.length());
         //---------------- Utility Code 2 ends ----------------
 
         std::cerr << "Dispatch file lengths: " << str1.size() << "," << str2.size() << std::endl;
